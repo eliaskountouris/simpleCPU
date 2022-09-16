@@ -1,0 +1,240 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x41141DC1BE6A6D4A",
+      "device": "xc7z020clg400-1",
+      "gen_directory": "../../../../simpleCPU.gen/sources_1/bd/layout",
+      "name": "layout",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2022.1",
+      "validated": "true"
+    },
+    "design_tree": {
+      "romModule_0": "",
+      "ledOutput_0": "",
+      "testModule_0": ""
+    },
+    "ports": {
+      "CLK_IN": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "layout_clk",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "LED0": {
+        "direction": "O"
+      },
+      "LED1": {
+        "direction": "O"
+      },
+      "LED2": {
+        "direction": "O"
+      },
+      "LED3": {
+        "direction": "O"
+      },
+      "BTN": {
+        "direction": "I",
+        "left": "3",
+        "right": "0"
+      }
+    },
+    "components": {
+      "romModule_0": {
+        "vlnv": "xilinx.com:module_ref:romModule:1.0",
+        "xci_name": "layout_romModule_0_0",
+        "xci_path": "ip/layout_romModule_0_0/layout_romModule_0_0.xci",
+        "inst_hier_path": "romModule_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "romModule",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "data_out": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "address": {
+            "direction": "I",
+            "left": "5",
+            "right": "0"
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "layout_clk",
+                "value_src": "default_prop"
+              }
+            }
+          }
+        }
+      },
+      "ledOutput_0": {
+        "vlnv": "xilinx.com:module_ref:ledOutput:1.0",
+        "xci_name": "layout_ledOutput_0_0",
+        "xci_path": "ip/layout_ledOutput_0_0/layout_ledOutput_0_0.xci",
+        "inst_hier_path": "ledOutput_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "ledOutput",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "LED_IN": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "LED0": {
+            "direction": "O"
+          },
+          "LED1": {
+            "direction": "O"
+          },
+          "LED2": {
+            "direction": "O"
+          },
+          "LED3": {
+            "direction": "O"
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "layout_clk",
+                "value_src": "default_prop"
+              }
+            }
+          }
+        }
+      },
+      "testModule_0": {
+        "vlnv": "xilinx.com:module_ref:testModule:1.0",
+        "xci_name": "layout_testModule_0_0",
+        "xci_path": "ip/layout_testModule_0_0/layout_testModule_0_0.xci",
+        "inst_hier_path": "testModule_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "testModule",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "BTN": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "LED": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "layout_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "regSelect": {
+            "direction": "O",
+            "left": "5",
+            "right": "0"
+          }
+        }
+      }
+    },
+    "nets": {
+      "BTN_1": {
+        "ports": [
+          "BTN",
+          "testModule_0/BTN"
+        ]
+      },
+      "clk_1": {
+        "ports": [
+          "CLK_IN",
+          "romModule_0/clk",
+          "ledOutput_0/clk",
+          "testModule_0/clk"
+        ]
+      },
+      "ledOutput_0_LED0": {
+        "ports": [
+          "ledOutput_0/LED0",
+          "LED0"
+        ]
+      },
+      "ledOutput_0_LED1": {
+        "ports": [
+          "ledOutput_0/LED1",
+          "LED1"
+        ]
+      },
+      "ledOutput_0_LED2": {
+        "ports": [
+          "ledOutput_0/LED2",
+          "LED2"
+        ]
+      },
+      "ledOutput_0_LED3": {
+        "ports": [
+          "ledOutput_0/LED3",
+          "LED3"
+        ]
+      },
+      "romModule_0_data_out": {
+        "ports": [
+          "romModule_0/data_out",
+          "ledOutput_0/LED_IN"
+        ]
+      },
+      "testModule_0_regSelect": {
+        "ports": [
+          "testModule_0/regSelect",
+          "romModule_0/address"
+        ]
+      }
+    }
+  }
+}

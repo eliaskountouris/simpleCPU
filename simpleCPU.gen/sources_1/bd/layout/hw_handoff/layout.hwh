@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Sep 16 18:30:12 2022" VIVADOVERSION="2022.1">
+
+  <SYSTEMINFO ARCH="zynq" BOARD="tul.com.tw:pynq-z2:part0:1.0" DEVICE="7z020" NAME="layout" PACKAGE="clg400" SPEEDGRADE="-1"/>
+
+  <EXTERNALPORTS>
+    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="CLK_IN" SIGIS="clk" SIGNAME="External_Ports_CLK_IN">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="romModule_0" PORT="clk"/>
+        <CONNECTION INSTANCE="ledOutput_0" PORT="clk"/>
+        <CONNECTION INSTANCE="testModule_0" PORT="clk"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="LED0" SIGIS="undef" SIGNAME="ledOutput_0_LED0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="ledOutput_0" PORT="LED0"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="LED1" SIGIS="undef" SIGNAME="ledOutput_0_LED1">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="ledOutput_0" PORT="LED1"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="LED2" SIGIS="undef" SIGNAME="ledOutput_0_LED2">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="ledOutput_0" PORT="LED2"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="LED3" SIGIS="undef" SIGNAME="ledOutput_0_LED3">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="ledOutput_0" PORT="LED3"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="3" NAME="BTN" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_BTN">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="testModule_0" PORT="BTN"/>
+      </CONNECTIONS>
+    </PORT>
+  </EXTERNALPORTS>
+
+  <EXTERNALINTERFACES/>
+
+  <MODULES>
+    <MODULE COREREVISION="1" FULLNAME="/ledOutput_0" HWVERSION="1.0" INSTANCE="ledOutput_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ledOutput" VLNV="xilinx.com:module_ref:ledOutput:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="layout_ledOutput_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="7" NAME="LED_IN" RIGHT="0" SIGIS="undef" SIGNAME="romModule_0_data_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="romModule_0" PORT="data_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="LED0" SIGIS="undef" SIGNAME="ledOutput_0_LED0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="LED0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="LED1" SIGIS="undef" SIGNAME="ledOutput_0_LED1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="LED1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="LED2" SIGIS="undef" SIGNAME="ledOutput_0_LED2">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="LED2"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="LED3" SIGIS="undef" SIGNAME="ledOutput_0_LED3">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="LED3"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_CLK_IN">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="CLK_IN"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/romModule_0" HWVERSION="1.0" INSTANCE="romModule_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="romModule" VLNV="xilinx.com:module_ref:romModule:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="layout_romModule_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" LEFT="7" NAME="data_out" RIGHT="0" SIGIS="undef" SIGNAME="romModule_0_data_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ledOutput_0" PORT="LED_IN"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="5" NAME="address" RIGHT="0" SIGIS="undef" SIGNAME="testModule_0_regSelect">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="testModule_0" PORT="regSelect"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_CLK_IN">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="CLK_IN"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/testModule_0" HWVERSION="1.0" INSTANCE="testModule_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="testModule" VLNV="xilinx.com:module_ref:testModule:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="layout_testModule_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="3" NAME="BTN" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_BTN">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="BTN"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="LED" RIGHT="0" SIGIS="undef"/>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_CLK_IN">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="CLK_IN"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="5" NAME="regSelect" RIGHT="0" SIGIS="undef" SIGNAME="testModule_0_regSelect">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="romModule_0" PORT="address"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>

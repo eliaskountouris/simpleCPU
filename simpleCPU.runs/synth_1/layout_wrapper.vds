@@ -1,0 +1,241 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Fri Sep 16 18:31:43 2022
+# Process ID: 247464
+# Current directory: /home/elias/Desktop/Projects/simpleCPU/simpleCPU.runs/synth_1
+# Command line: vivado -log layout_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source layout_wrapper.tcl
+# Log file: /home/elias/Desktop/Projects/simpleCPU/simpleCPU.runs/synth_1/layout_wrapper.vds
+# Journal file: /home/elias/Desktop/Projects/simpleCPU/simpleCPU.runs/synth_1/vivado.jou
+# Running On: elias-xps159570, OS: Linux, CPU Frequency: 3499.996 MHz, CPU Physical cores: 6, Host memory: 7960 MB
+#-----------------------------------------------------------
+Sourcing tcl script '/opt/Xilinx/Vivado/2022.1/scripts/Vivado_init.tcl'
+source layout_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2022.1/data/ip'.
+add_files: Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 2698.473 ; gain = 88.043 ; free physical = 1740 ; free virtual = 3568
+Command: read_checkpoint -auto_incremental -incremental /home/elias/Desktop/Projects/simpleCPU/simpleCPU.srcs/utils_1/imports/synth_1/layout_wrapper.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from /home/elias/Desktop/Projects/simpleCPU/simpleCPU.srcs/utils_1/imports/synth_1/layout_wrapper.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top layout_wrapper -part xc7z020clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 248010
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2698.473 ; gain = 0.000 ; free physical = 154 ; free virtual = 1937
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'layout_wrapper' [/home/elias/Desktop/Projects/simpleCPU/simpleCPU.gen/sources_1/bd/layout/hdl/layout_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'layout' [/home/elias/Desktop/Projects/simpleCPU/simpleCPU.gen/sources_1/bd/layout/synth/layout.v:12]
+INFO: [Synth 8-6157] synthesizing module 'layout_ledOutput_0_0' [/home/elias/Desktop/Projects/simpleCPU/simpleCPU.runs/synth_1/.Xil/Vivado-247464-elias-xps159570/realtime/layout_ledOutput_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'layout_ledOutput_0_0' (0#1) [/home/elias/Desktop/Projects/simpleCPU/simpleCPU.runs/synth_1/.Xil/Vivado-247464-elias-xps159570/realtime/layout_ledOutput_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'layout_romModule_0_0' [/home/elias/Desktop/Projects/simpleCPU/simpleCPU.runs/synth_1/.Xil/Vivado-247464-elias-xps159570/realtime/layout_romModule_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'layout_romModule_0_0' (0#1) [/home/elias/Desktop/Projects/simpleCPU/simpleCPU.runs/synth_1/.Xil/Vivado-247464-elias-xps159570/realtime/layout_romModule_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'layout_testModule_0_0' [/home/elias/Desktop/Projects/simpleCPU/simpleCPU.runs/synth_1/.Xil/Vivado-247464-elias-xps159570/realtime/layout_testModule_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'layout_testModule_0_0' (0#1) [/home/elias/Desktop/Projects/simpleCPU/simpleCPU.runs/synth_1/.Xil/Vivado-247464-elias-xps159570/realtime/layout_testModule_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'LED' of module 'layout_testModule_0_0' is unconnected for instance 'testModule_0' [/home/elias/Desktop/Projects/simpleCPU/simpleCPU.gen/sources_1/bd/layout/synth/layout.v:53]
+WARNING: [Synth 8-7023] instance 'testModule_0' of module 'layout_testModule_0_0' has 4 connections declared, but only 3 given [/home/elias/Desktop/Projects/simpleCPU/simpleCPU.gen/sources_1/bd/layout/synth/layout.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'layout' (0#1) [/home/elias/Desktop/Projects/simpleCPU/simpleCPU.gen/sources_1/bd/layout/synth/layout.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'layout_wrapper' (0#1) [/home/elias/Desktop/Projects/simpleCPU/simpleCPU.gen/sources_1/bd/layout/hdl/layout_wrapper.v:12]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2698.473 ; gain = 0.000 ; free physical = 1272 ; free virtual = 3033
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2698.473 ; gain = 0.000 ; free physical = 1274 ; free virtual = 3037
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2698.473 ; gain = 0.000 ; free physical = 1274 ; free virtual = 3037
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2698.473 ; gain = 0.000 ; free physical = 1271 ; free virtual = 3034
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/elias/Desktop/Projects/simpleCPU/simpleCPU.gen/sources_1/bd/layout/ip/layout_romModule_0_0/layout_romModule_0_0/layout_romModule_0_0_in_context.xdc] for cell 'layout_i/romModule_0'
+Finished Parsing XDC File [/home/elias/Desktop/Projects/simpleCPU/simpleCPU.gen/sources_1/bd/layout/ip/layout_romModule_0_0/layout_romModule_0_0/layout_romModule_0_0_in_context.xdc] for cell 'layout_i/romModule_0'
+Parsing XDC File [/home/elias/Desktop/Projects/simpleCPU/simpleCPU.gen/sources_1/bd/layout/ip/layout_ledOutput_0_0/layout_ledOutput_0_0/layout_ledOutput_0_0_in_context.xdc] for cell 'layout_i/ledOutput_0'
+Finished Parsing XDC File [/home/elias/Desktop/Projects/simpleCPU/simpleCPU.gen/sources_1/bd/layout/ip/layout_ledOutput_0_0/layout_ledOutput_0_0/layout_ledOutput_0_0_in_context.xdc] for cell 'layout_i/ledOutput_0'
+Parsing XDC File [/home/elias/Desktop/Projects/simpleCPU/simpleCPU.gen/sources_1/bd/layout/ip/layout_testModule_0_0/layout_testModule_0_0/layout_testModule_0_0_in_context.xdc] for cell 'layout_i/testModule_0'
+Finished Parsing XDC File [/home/elias/Desktop/Projects/simpleCPU/simpleCPU.gen/sources_1/bd/layout/ip/layout_testModule_0_0/layout_testModule_0_0/layout_testModule_0_0_in_context.xdc] for cell 'layout_i/testModule_0'
+Parsing XDC File [/home/elias/Desktop/Projects/simpleCPU/simpleCPU.srcs/constrs_1/new/constraints.xdc]
+Finished Parsing XDC File [/home/elias/Desktop/Projects/simpleCPU/simpleCPU.srcs/constrs_1/new/constraints.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/elias/Desktop/Projects/simpleCPU/simpleCPU.srcs/constrs_1/new/constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/layout_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/layout_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [/home/elias/Desktop/Projects/simpleCPU/simpleCPU.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/elias/Desktop/Projects/simpleCPU/simpleCPU.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2698.473 ; gain = 0.000 ; free physical = 1183 ; free virtual = 2949
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2698.473 ; gain = 0.000 ; free physical = 1183 ; free virtual = 2949
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2698.473 ; gain = 0.000 ; free physical = 1251 ; free virtual = 3021
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2698.473 ; gain = 0.000 ; free physical = 1251 ; free virtual = 3021
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for layout_i. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for layout_i/romModule_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for layout_i/ledOutput_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for layout_i/testModule_0. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2698.473 ; gain = 0.000 ; free physical = 1251 ; free virtual = 3021
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2698.473 ; gain = 0.000 ; free physical = 1249 ; free virtual = 3020
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2698.473 ; gain = 0.000 ; free physical = 1241 ; free virtual = 3015
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2698.473 ; gain = 0.000 ; free physical = 1116 ; free virtual = 2891
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2698.473 ; gain = 0.000 ; free physical = 1116 ; free virtual = 2891
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2698.473 ; gain = 0.000 ; free physical = 1111 ; free virtual = 2886
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 2698.473 ; gain = 0.000 ; free physical = 1106 ; free virtual = 2883
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 2698.473 ; gain = 0.000 ; free physical = 1106 ; free virtual = 2883
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 2698.473 ; gain = 0.000 ; free physical = 1106 ; free virtual = 2883
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 2698.473 ; gain = 0.000 ; free physical = 1106 ; free virtual = 2883
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 2698.473 ; gain = 0.000 ; free physical = 1106 ; free virtual = 2883
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 2698.473 ; gain = 0.000 ; free physical = 1106 ; free virtual = 2883
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+----------------------+----------+
+|      |BlackBox name         |Instances |
++------+----------------------+----------+
+|1     |layout_ledOutput_0_0  |         1|
+|2     |layout_romModule_0_0  |         1|
+|3     |layout_testModule_0_0 |         1|
++------+----------------------+----------+
+
+Report Cell Usage: 
++------+--------------------+------+
+|      |Cell                |Count |
++------+--------------------+------+
+|1     |layout_ledOutput_0  |     1|
+|2     |layout_romModule_0  |     1|
+|3     |layout_testModule_0 |     1|
+|4     |IBUF                |     5|
+|5     |OBUF                |     4|
++------+--------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 2698.473 ; gain = 0.000 ; free physical = 1106 ; free virtual = 2883
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2698.473 ; gain = 0.000 ; free physical = 1157 ; free virtual = 2935
+Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 2698.473 ; gain = 0.000 ; free physical = 1157 ; free virtual = 2935
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2698.473 ; gain = 0.000 ; free physical = 1149 ; free virtual = 2927
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2698.473 ; gain = 0.000 ; free physical = 1198 ; free virtual = 2976
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: ea577759
+INFO: [Common 17-83] Releasing license: Synthesis
+32 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:33 ; elapsed = 00:00:29 . Memory (MB): peak = 2698.473 ; gain = 0.000 ; free physical = 1400 ; free virtual = 3178
+INFO: [Common 17-1381] The checkpoint '/home/elias/Desktop/Projects/simpleCPU/simpleCPU.runs/synth_1/layout_wrapper.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file layout_wrapper_utilization_synth.rpt -pb layout_wrapper_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Sep 16 18:32:27 2022...
