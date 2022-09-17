@@ -1,7 +1,7 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2022.1 (lin64) Build 3526262 Mon Apr 18 15:47:01 MDT 2022
-//Date        : Fri Sep 16 18:30:12 2022
+//Date        : Sat Sep 17 15:22:46 2022
 //Host        : elias-xps159570 running 64-bit EndeavourOS Linux
 //Command     : generate_target layout.bd
 //Design      : layout
@@ -30,8 +30,10 @@ module layout
   wire ledOutput_0_LED1;
   wire ledOutput_0_LED2;
   wire ledOutput_0_LED3;
-  wire [7:0]romModule_0_data_out;
+  wire testModule_0_WE;
+  wire [7:0]testModule_0_data;
   wire [5:0]testModule_0_regSelect;
+  wire [7:0]wrmModule_0_data_out;
 
   assign BTN_1 = BTN[3:0];
   assign LED0 = ledOutput_0_LED0;
@@ -44,14 +46,18 @@ module layout
         .LED1(ledOutput_0_LED1),
         .LED2(ledOutput_0_LED2),
         .LED3(ledOutput_0_LED3),
-        .LED_IN(romModule_0_data_out),
+        .LED_IN(wrmModule_0_data_out),
         .clk(clk_1));
-  layout_romModule_0_0 romModule_0
-       (.address(testModule_0_regSelect),
-        .clk(clk_1),
-        .data_out(romModule_0_data_out));
   layout_testModule_0_0 testModule_0
        (.BTN(BTN_1),
+        .WE(testModule_0_WE),
         .clk(clk_1),
+        .data(testModule_0_data),
         .regSelect(testModule_0_regSelect));
+  layout_wrmModule_0_1 wrmModule_0
+       (.address(testModule_0_regSelect),
+        .clk(clk_1),
+        .data_in(testModule_0_data),
+        .data_out(wrmModule_0_data_out),
+        .writeEnable(testModule_0_WE));
 endmodule

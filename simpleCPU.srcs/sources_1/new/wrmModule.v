@@ -16,13 +16,15 @@ module wrmModule(
     initial
         begin: programRom
             ROM[0] = 8'h00;
-            ROM[1] = 8'h00;
+            ROM[1] = 8'h01;
+            ROM[2] = 8'h02;
+            ROM[3] = 8'h00;
         end
     
     always @ (posedge clk)
        if (writeEnable == 1'b1)
             ROM[address] = data_in;
        else
-            data_out = ROM[adress];
+            data_out = ROM[address];
     
 endmodule

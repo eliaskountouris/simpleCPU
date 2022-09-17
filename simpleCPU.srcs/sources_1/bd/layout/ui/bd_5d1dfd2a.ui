@@ -1,29 +1,31 @@
 {
    "ActiveEmotionalView":"Default View",
    "Default View_ScaleFactor":"1.0",
-   "Default View_TopLeft":"-521,-370",
+   "Default View_TopLeft":"-506,-405",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
 #  -string -flagsOSRD
 preplace port port-id_CLK_IN -pg 1 -lvl 0 -x -350 -y -200 -defaultsOSRD
-preplace port port-id_LED0 -pg 1 -lvl 3 -x 530 -y -190 -defaultsOSRD
-preplace port port-id_LED1 -pg 1 -lvl 3 -x 530 -y -160 -defaultsOSRD
-preplace port port-id_LED2 -pg 1 -lvl 3 -x 530 -y -130 -defaultsOSRD
-preplace port port-id_LED3 -pg 1 -lvl 3 -x 530 -y -100 -defaultsOSRD
+preplace port port-id_LED0 -pg 1 -lvl 3 -x 560 -y -190 -defaultsOSRD
+preplace port port-id_LED1 -pg 1 -lvl 3 -x 560 -y -160 -defaultsOSRD
+preplace port port-id_LED2 -pg 1 -lvl 3 -x 560 -y -130 -defaultsOSRD
+preplace port port-id_LED3 -pg 1 -lvl 3 -x 560 -y -100 -defaultsOSRD
 preplace portBus BTN -pg 1 -lvl 0 -x -350 -y -50 -defaultsOSRD
-preplace inst romModule_0 -pg 1 -lvl 1 -x 120 -y -210 -defaultsOSRD
-preplace inst ledOutput_0 -pg 1 -lvl 2 -x 380 -y -130 -defaultsOSRD
+preplace inst ledOutput_0 -pg 1 -lvl 2 -x 400 -y -130 -defaultsOSRD
 preplace inst testModule_0 -pg 1 -lvl 1 -x 120 -y -40 -defaultsOSRD
+preplace inst wrmModule_0 -pg 1 -lvl 1 -x 120 -y -220 -defaultsOSRD
 preplace netloc BTN_1 1 0 1 N -50
-preplace netloc clk_1 1 0 2 -330 -120 N
-preplace netloc ledOutput_0_LED0 1 2 1 490 -190n
-preplace netloc ledOutput_0_LED1 1 2 1 500 -160n
-preplace netloc ledOutput_0_LED2 1 2 1 490 -130n
+preplace netloc clk_1 1 0 2 -330 -130 290
+preplace netloc ledOutput_0_LED0 1 2 1 510 -190n
+preplace netloc ledOutput_0_LED1 1 2 1 520 -160n
+preplace netloc ledOutput_0_LED2 1 2 1 510 -130n
 preplace netloc ledOutput_0_LED3 1 2 1 N -100
-preplace netloc romModule_0_data_out 1 1 1 260 -210n
-preplace netloc testModule_0_regSelect 1 0 2 -320 -110 260
-levelinfo -pg 1 -350 120 380 530
-pagesize -pg 1 -db -bbox -sgen -460 -280 620 200
+preplace netloc testModule_0_WE 1 0 2 -320 -320 280
+preplace netloc testModule_0_data 1 0 2 -310 -310 260
+preplace netloc testModule_0_regSelect 1 0 2 -330 -330 270
+preplace netloc wrmModule_0_data_out 1 1 1 290 -220n
+levelinfo -pg 1 -350 120 400 560
+pagesize -pg 1 -db -bbox -sgen -460 -400 650 200
 "
 }
 0

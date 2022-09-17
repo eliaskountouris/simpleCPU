@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1663367422" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/layout_wrapper.dcp">
+<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1663442576" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/layout_wrapper.dcp">
   <File Type="VDS-TIMINGSUMMARY" Name="layout_wrapper_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="layout_wrapper.dcp"/>
   <File Type="RDS-UTIL-PB" Name="layout_wrapper_utilization_synth.pb"/>
@@ -11,14 +11,14 @@
   <File Type="PA-TCL" Name="layout_wrapper.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PSRCDIR/sources_1/new/memory.v">
+    <File Path="$PSRCDIR/sources_1/new/testModule.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/testModule.v">
+    <File Path="$PSRCDIR/sources_1/new/memory.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -34,14 +34,6 @@
     </File>
     <File Path="$PGENDIR/sources_1/bd/layout/hdl/layout_wrapper.v">
       <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/wrmModule.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -82,7 +74,7 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
     <Step Id="synth_design"/>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="layout_wrmModule_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="layout_testModule_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="layout_ledOutput_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="layout_romModule_0_0"/>
 </GenRun>

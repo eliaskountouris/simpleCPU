@@ -11,9 +11,9 @@
       "validated": "true"
     },
     "design_tree": {
-      "romModule_0": "",
       "ledOutput_0": "",
-      "testModule_0": ""
+      "testModule_0": "",
+      "wrmModule_0": ""
     },
     "ports": {
       "CLK_IN": {
@@ -60,43 +60,6 @@
       }
     },
     "components": {
-      "romModule_0": {
-        "vlnv": "xilinx.com:module_ref:romModule:1.0",
-        "xci_name": "layout_romModule_0_0",
-        "xci_path": "ip/layout_romModule_0_0/layout_romModule_0_0.xci",
-        "inst_hier_path": "romModule_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "romModule",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "data_out": {
-            "direction": "O",
-            "left": "7",
-            "right": "0"
-          },
-          "address": {
-            "direction": "I",
-            "left": "5",
-            "right": "0"
-          },
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "FREQ_HZ": {
-                "value": "100000000",
-                "value_src": "user_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "layout_clk",
-                "value_src": "default_prop"
-              }
-            }
-          }
-        }
-      },
       "ledOutput_0": {
         "vlnv": "xilinx.com:module_ref:ledOutput:1.0",
         "xci_name": "layout_ledOutput_0_0",
@@ -180,6 +143,59 @@
             "direction": "O",
             "left": "5",
             "right": "0"
+          },
+          "data": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "WE": {
+            "direction": "O"
+          }
+        }
+      },
+      "wrmModule_0": {
+        "vlnv": "xilinx.com:module_ref:wrmModule:1.0",
+        "xci_name": "layout_wrmModule_0_1",
+        "xci_path": "ip/layout_wrmModule_0_1/layout_wrmModule_0_1.xci",
+        "inst_hier_path": "wrmModule_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "wrmModule",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "data_out": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "data_in": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "address": {
+            "direction": "I",
+            "left": "5",
+            "right": "0"
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "layout_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "writeEnable": {
+            "direction": "I"
           }
         }
       }
@@ -194,9 +210,9 @@
       "clk_1": {
         "ports": [
           "CLK_IN",
-          "romModule_0/clk",
           "ledOutput_0/clk",
-          "testModule_0/clk"
+          "testModule_0/clk",
+          "wrmModule_0/clk"
         ]
       },
       "ledOutput_0_LED0": {
@@ -223,16 +239,28 @@
           "LED3"
         ]
       },
-      "romModule_0_data_out": {
+      "testModule_0_WE": {
         "ports": [
-          "romModule_0/data_out",
-          "ledOutput_0/LED_IN"
+          "testModule_0/WE",
+          "wrmModule_0/writeEnable"
+        ]
+      },
+      "testModule_0_data": {
+        "ports": [
+          "testModule_0/data",
+          "wrmModule_0/data_in"
         ]
       },
       "testModule_0_regSelect": {
         "ports": [
           "testModule_0/regSelect",
-          "romModule_0/address"
+          "wrmModule_0/address"
+        ]
+      },
+      "wrmModule_0_data_out": {
+        "ports": [
+          "wrmModule_0/data_out",
+          "ledOutput_0/LED_IN"
         ]
       }
     }

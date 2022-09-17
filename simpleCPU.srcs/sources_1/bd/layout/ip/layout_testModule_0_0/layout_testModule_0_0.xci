@@ -59,7 +59,9 @@
                   &quot;BTN&quot;: [ { &quot;direction&quot;: &quot;in&quot;, &quot;size_left&quot;: &quot;3&quot;, &quot;size_right&quot;: &quot;0&quot; } ],
                   &quot;LED&quot;: [ { &quot;direction&quot;: &quot;out&quot;, &quot;size_left&quot;: &quot;3&quot;, &quot;size_right&quot;: &quot;0&quot; } ],
                   &quot;clk&quot;: [ { &quot;direction&quot;: &quot;in&quot; } ],
-                  &quot;regSelect&quot;: [ { &quot;direction&quot;: &quot;out&quot;, &quot;size_left&quot;: &quot;5&quot;, &quot;size_right&quot;: &quot;0&quot; } ]
+                  &quot;regSelect&quot;: [ { &quot;direction&quot;: &quot;out&quot;, &quot;size_left&quot;: &quot;5&quot;, &quot;size_right&quot;: &quot;0&quot; } ],
+                  &quot;data&quot;: [ { &quot;direction&quot;: &quot;out&quot;, &quot;size_left&quot;: &quot;7&quot;, &quot;size_right&quot;: &quot;0&quot; } ],
+                  &quot;WE&quot;: [ { &quot;direction&quot;: &quot;out&quot; } ]
                 },
                 &quot;interfaces&quot;: {
                   &quot;clk&quot;: {

@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Sat Sep 17 15:22:59 2022
+# Process ID: 142801
+# Current directory: /home/elias/Desktop/Projects/simpleCPU/simpleCPU.runs/layout_wrmModule_0_1_synth_1
+# Command line: vivado -log layout_wrmModule_0_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source layout_wrmModule_0_1.tcl
+# Log file: /home/elias/Desktop/Projects/simpleCPU/simpleCPU.runs/layout_wrmModule_0_1_synth_1/layout_wrmModule_0_1.vds
+# Journal file: /home/elias/Desktop/Projects/simpleCPU/simpleCPU.runs/layout_wrmModule_0_1_synth_1/vivado.jou
+# Running On: elias-xps159570, OS: Linux, CPU Frequency: 3224.664 MHz, CPU Physical cores: 6, Host memory: 7960 MB
+#-----------------------------------------------------------
+source layout_wrmModule_0_1.tcl -notrace

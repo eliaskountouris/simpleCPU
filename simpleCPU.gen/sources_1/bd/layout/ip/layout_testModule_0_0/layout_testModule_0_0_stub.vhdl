@@ -1,7 +1,7 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2022.1 (lin64) Build 3526262 Mon Apr 18 15:47:01 MDT 2022
--- Date        : Fri Sep 16 18:31:30 2022
+-- Date        : Sat Sep 17 15:15:13 2022
 -- Host        : elias-xps159570 running 64-bit EndeavourOS Linux
 -- Command     : write_vhdl -force -mode synth_stub
 --               /home/elias/Desktop/Projects/simpleCPU/simpleCPU.gen/sources_1/bd/layout/ip/layout_testModule_0_0/layout_testModule_0_0_stub.vhdl
@@ -17,7 +17,9 @@ entity layout_testModule_0_0 is
     BTN : in STD_LOGIC_VECTOR ( 3 downto 0 );
     LED : out STD_LOGIC_VECTOR ( 3 downto 0 );
     clk : in STD_LOGIC;
-    regSelect : out STD_LOGIC_VECTOR ( 5 downto 0 )
+    regSelect : out STD_LOGIC_VECTOR ( 5 downto 0 );
+    data : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    WE : out STD_LOGIC
   );
 
 end layout_testModule_0_0;
@@ -26,7 +28,7 @@ architecture stub of layout_testModule_0_0 is
 attribute syn_black_box : boolean;
 attribute black_box_pad_pin : string;
 attribute syn_black_box of stub : architecture is true;
-attribute black_box_pad_pin of stub : architecture is "BTN[3:0],LED[3:0],clk,regSelect[5:0]";
+attribute black_box_pad_pin of stub : architecture is "BTN[3:0],LED[3:0],clk,regSelect[5:0],data[7:0],WE";
 attribute X_CORE_INFO : string;
 attribute X_CORE_INFO of stub : architecture is "testModule,Vivado 2022.1";
 begin

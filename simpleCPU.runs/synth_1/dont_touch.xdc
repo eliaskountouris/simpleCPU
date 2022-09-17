@@ -6,13 +6,13 @@
 # Block Designs: bd/layout/layout.bd
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==layout || ORIG_REF_NAME==layout} -quiet] -quiet
 
-# IP: bd/layout/ip/layout_romModule_0_0/layout_romModule_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==layout_romModule_0_0 || ORIG_REF_NAME==layout_romModule_0_0} -quiet] -quiet
-
 # IP: bd/layout/ip/layout_ledOutput_0_0/layout_ledOutput_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==layout_ledOutput_0_0 || ORIG_REF_NAME==layout_ledOutput_0_0} -quiet] -quiet
 
 # IP: bd/layout/ip/layout_testModule_0_0/layout_testModule_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==layout_testModule_0_0 || ORIG_REF_NAME==layout_testModule_0_0} -quiet] -quiet
+
+# IP: bd/layout/ip/layout_wrmModule_0_1/layout_wrmModule_0_1.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==layout_wrmModule_0_1 || ORIG_REF_NAME==layout_wrmModule_0_1} -quiet] -quiet
 
 # XDC: /home/elias/Desktop/Projects/simpleCPU/simpleCPU.gen/sources_1/bd/layout/layout_ooc.xdc

@@ -1,7 +1,7 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2022.1 (lin64) Build 3526262 Mon Apr 18 15:47:01 MDT 2022
--- Date        : Fri Sep 16 18:31:30 2022
+-- Date        : Sat Sep 17 15:15:13 2022
 -- Host        : elias-xps159570 running 64-bit EndeavourOS Linux
 -- Command     : write_vhdl -force -mode funcsim
 --               /home/elias/Desktop/Projects/simpleCPU/simpleCPU.gen/sources_1/bd/layout/ip/layout_testModule_0_0/layout_testModule_0_0_sim_netlist.vhdl
@@ -17,41 +17,61 @@ use UNISIM.VCOMPONENTS.ALL;
 entity layout_testModule_0_0_testModule is
   port (
     regSelect : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    BTN : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    clk : in STD_LOGIC
+    WE : out STD_LOGIC;
+    clk : in STD_LOGIC;
+    BTN : in STD_LOGIC_VECTOR ( 3 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of layout_testModule_0_0_testModule : entity is "testModule";
 end layout_testModule_0_0_testModule;
 
 architecture STRUCTURE of layout_testModule_0_0_testModule is
-  signal \^regselect\ : STD_LOGIC_VECTOR ( 1 downto 0 );
+  signal \WE__0_n_0\ : STD_LOGIC;
   signal \regSelect[0]_i_1_n_0\ : STD_LOGIC;
   signal \regSelect[1]_i_1_n_0\ : STD_LOGIC;
+  attribute SOFT_HLUTNM : string;
+  attribute SOFT_HLUTNM of \regSelect[0]_i_1\ : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of \regSelect[1]_i_1\ : label is "soft_lutpair0";
 begin
-  regSelect(1 downto 0) <= \^regselect\(1 downto 0);
-\regSelect[0]_i_1\: unisim.vcomponents.LUT5
+\WE__0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"DD005D00"
+      INIT => X"0010"
     )
         port map (
-      I0 => BTN(1),
+      I0 => BTN(0),
       I1 => BTN(2),
       I2 => BTN(3),
+      I3 => BTN(1),
+      O => \WE__0_n_0\
+    );
+WE_reg: unisim.vcomponents.FDRE
+     port map (
+      C => clk,
+      CE => '1',
+      D => \WE__0_n_0\,
+      Q => WE,
+      R => '0'
+    );
+\regSelect[0]_i_1\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"0010"
+    )
+        port map (
+      I0 => BTN(3),
+      I1 => BTN(2),
+      I2 => BTN(1),
       I3 => BTN(0),
-      I4 => \^regselect\(0),
       O => \regSelect[0]_i_1_n_0\
     );
-\regSelect[1]_i_1\: unisim.vcomponents.LUT5
+\regSelect[1]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"AA002A00"
+      INIT => X"0010"
     )
         port map (
-      I0 => BTN(1),
-      I1 => BTN(2),
-      I2 => BTN(3),
-      I3 => BTN(0),
-      I4 => \^regselect\(1),
+      I0 => BTN(3),
+      I1 => BTN(0),
+      I2 => BTN(2),
+      I3 => BTN(1),
       O => \regSelect[1]_i_1_n_0\
     );
 \regSelect_reg[0]\: unisim.vcomponents.FDRE
@@ -62,7 +82,7 @@ begin
       C => clk,
       CE => '1',
       D => \regSelect[0]_i_1_n_0\,
-      Q => \^regselect\(0),
+      Q => regSelect(0),
       R => '0'
     );
 \regSelect_reg[1]\: unisim.vcomponents.FDRE
@@ -73,7 +93,7 @@ begin
       C => clk,
       CE => '1',
       D => \regSelect[1]_i_1_n_0\,
-      Q => \^regselect\(1),
+      Q => regSelect(1),
       R => '0'
     );
 end STRUCTURE;
@@ -86,7 +106,9 @@ entity layout_testModule_0_0 is
     BTN : in STD_LOGIC_VECTOR ( 3 downto 0 );
     LED : out STD_LOGIC_VECTOR ( 3 downto 0 );
     clk : in STD_LOGIC;
-    regSelect : out STD_LOGIC_VECTOR ( 5 downto 0 )
+    regSelect : out STD_LOGIC_VECTOR ( 5 downto 0 );
+    data : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    WE : out STD_LOGIC
   );
   attribute NotValidForBitStream : boolean;
   attribute NotValidForBitStream of layout_testModule_0_0 : entity is true;
@@ -102,6 +124,7 @@ end layout_testModule_0_0;
 
 architecture STRUCTURE of layout_testModule_0_0 is
   signal \<const0>\ : STD_LOGIC;
+  signal \<const1>\ : STD_LOGIC;
   signal \^regselect\ : STD_LOGIC_VECTOR ( 1 downto 0 );
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of clk : signal is "xilinx.com:signal:clock:1.0 clk CLK";
@@ -112,6 +135,14 @@ begin
   LED(2) <= \<const0>\;
   LED(1) <= \<const0>\;
   LED(0) <= \<const0>\;
+  data(7) <= \<const1>\;
+  data(6) <= \<const1>\;
+  data(5) <= \<const1>\;
+  data(4) <= \<const1>\;
+  data(3) <= \<const1>\;
+  data(2) <= \<const1>\;
+  data(1) <= \<const1>\;
+  data(0) <= \<const1>\;
   regSelect(5) <= \<const0>\;
   regSelect(4) <= \<const0>\;
   regSelect(3) <= \<const0>\;
@@ -121,9 +152,14 @@ GND: unisim.vcomponents.GND
      port map (
       G => \<const0>\
     );
+VCC: unisim.vcomponents.VCC
+     port map (
+      P => \<const1>\
+    );
 inst: entity work.layout_testModule_0_0_testModule
      port map (
       BTN(3 downto 0) => BTN(3 downto 0),
+      WE => WE,
       clk => clk,
       regSelect(1 downto 0) => \^regselect\(1 downto 0)
     );

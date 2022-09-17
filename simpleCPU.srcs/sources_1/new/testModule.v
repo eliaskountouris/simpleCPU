@@ -22,22 +22,39 @@ module testModule(
         input [3:0] BTN,
         output reg [3:0] LED,
         input wire clk,
-        output reg [5:0] regSelect
+        output reg [5:0] regSelect,
+        output reg [7:0] data,
+        output reg WE
     );
 
     initial
         begin
              regSelect = 0;
+             data = 8'hff;
        end
     
-    always @ (posedge clk)
-        if (BTN[0] == 0) begin
-            regSelect = 0; end
-        else if (BTN[1] == 0) begin
-            regSelect = 1; end
-        else if (BTN[2] == 0) begin
-            regSelect = 2; end
-        else if (BTN[3] == 0) begin
-            regSelect = 3; end
-         
+    always @ (posedge clk) begin
+            case (BTN)
+            4'b0001: begin
+                WE = 0;
+                regSelect = 0;
+                end
+            4'b0010: begin
+                WE = 0;
+                regSelect = 1;
+                end
+            4'b0100: begin
+                WE = 0;
+                regSelect = 2;
+                end 
+            4'b1000: begin
+                WE = 1;
+                regSelect = 0;
+                end 
+            default: begin
+                WE = 0;
+                regSelect = 0;
+                end      
+            endcase    
+    end
 endmodule

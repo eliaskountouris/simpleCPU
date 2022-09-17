@@ -58,7 +58,9 @@ module layout_testModule_0_0 (
   BTN,
   LED,
   clk,
-  regSelect
+  regSelect,
+  data,
+  WE
 );
 
 input wire [3 : 0] BTN;
@@ -67,11 +69,15 @@ output wire [3 : 0] LED;
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *)
 input wire clk;
 output wire [5 : 0] regSelect;
+output wire [7 : 0] data;
+output wire WE;
 
   testModule inst (
     .BTN(BTN),
     .LED(LED),
     .clk(clk),
-    .regSelect(regSelect)
+    .regSelect(regSelect),
+    .data(data),
+    .WE(WE)
   );
 endmodule

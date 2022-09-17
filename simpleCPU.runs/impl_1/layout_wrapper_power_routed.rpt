@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2022.1 (lin64) Build 3526262 Mon Apr 18 15:47:01 MDT 2022
-| Date             : Fri Sep 16 18:33:34 2022
+| Date             : Sat Sep 17 15:26:06 2022
 | Host             : elias-xps159570 running 64-bit EndeavourOS Linux
 | Command          : report_power -file layout_wrapper_power_routed.rpt -pb layout_wrapper_power_summary_routed.pb -rpx layout_wrapper_power_routed.rpx
 | Design           : layout_wrapper
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.110        |
+| Total On-Chip Power (W)  | 0.103        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.004        |
-| Device Static (W)        | 0.106        |
+| Dynamic (W)              | 0.000        |
+| Device Static (W)        | 0.103        |
 | Effective TJA (C/W)      | 11.5         |
-| Max Ambient (C)          | 83.7         |
-| Junction Temperature (C) | 26.3         |
+| Max Ambient (C)          | 83.8         |
+| Junction Temperature (C) | 26.2         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -49,19 +49,20 @@ Table of Contents
 1.1 On-Chip Components
 ----------------------
 
-+----------------+-----------+----------+-----------+-----------------+
-| On-Chip        | Power (W) | Used     | Available | Utilization (%) |
-+----------------+-----------+----------+-----------+-----------------+
-| Clocks         |    <0.001 |        3 |       --- |             --- |
-| Slice Logic    |    <0.001 |       20 |       --- |             --- |
-|   LUT as Logic |    <0.001 |        4 |     53200 |           <0.01 |
-|   Register     |    <0.001 |        9 |    106400 |           <0.01 |
-|   Others       |     0.000 |        6 |       --- |             --- |
-| Signals        |    <0.001 |       13 |       --- |             --- |
-| I/O            |     0.004 |        9 |       125 |            7.20 |
-| Static Power   |     0.106 |          |           |                 |
-| Total          |     0.110 |          |           |                 |
-+----------------+-----------+----------+-----------+-----------------+
++--------------------------+-----------+----------+-----------+-----------------+
+| On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
++--------------------------+-----------+----------+-----------+-----------------+
+| Clocks                   |    <0.001 |        3 |       --- |             --- |
+| Slice Logic              |    <0.001 |       26 |       --- |             --- |
+|   LUT as Logic           |    <0.001 |        3 |     53200 |           <0.01 |
+|   Register               |    <0.001 |       11 |    106400 |            0.01 |
+|   Others                 |     0.000 |        7 |       --- |             --- |
+|   LUT as Distributed RAM |     0.000 |        4 |     17400 |            0.02 |
+| Signals                  |    <0.001 |       16 |       --- |             --- |
+| I/O                      |    <0.001 |        9 |       125 |            7.20 |
+| Static Power             |     0.103 |          |           |                 |
+| Total                    |     0.103 |          |           |                 |
++--------------------------+-----------+----------+-----------+-----------------+
 
 
 1.2 Power Supply Summary
@@ -72,7 +73,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Vccint    |       1.000 |     0.008 |       0.000 |      0.007 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.010 |       0.000 |      0.010 |       NA    | Unspecified | NA         |
-| Vcco33    |       3.300 |     0.002 |       0.001 |      0.001 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -143,10 +144,8 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+----------------+-----------+
-| Name           | Power (W) |
-+----------------+-----------+
-| layout_wrapper |     0.004 |
-+----------------+-----------+
++------+-----------+
+| Name | Power (W) |
++------+-----------+
 
 

@@ -10,7 +10,7 @@
 
 Sourcing tcl script '/opt/Xilinx/Vivado/2022.1/scripts/Vivado_init.tcl'
 source layout_ledOutput_0_0.tcl -notrace
-create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 2607.426 ; gain = 5.961 ; free physical = 3841 ; free virtual = 5258
+create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 2607.426 ; gain = 5.961 ; free physical = 5486 ; free virtual = 6191
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2022.1/data/ip'.
@@ -21,9 +21,9 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 245580
+INFO: [Synth 8-7075] Helper process launched with PID 127682
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2607.426 ; gain = 0.000 ; free physical = 1012 ; free virtual = 2607
+Starting Synthesize : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2607.426 ; gain = 0.000 ; free physical = 3145 ; free virtual = 4697
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'layout_ledOutput_0_0' [/home/elias/Desktop/Projects/simpleCPU/simpleCPU.gen/sources_1/bd/layout/ip/layout_ledOutput_0_0/synth/layout_ledOutput_0_0.v:53]
 INFO: [Synth 8-6157] synthesizing module 'ledOutput' [/home/elias/Desktop/Projects/simpleCPU/simpleCPU.srcs/sources_1/new/testModule.v:3]
@@ -34,21 +34,21 @@ WARNING: [Synth 8-7129] Port LED_IN[6] in module ledOutput is either unconnected
 WARNING: [Synth 8-7129] Port LED_IN[5] in module ledOutput is either unconnected or has no load
 WARNING: [Synth 8-7129] Port LED_IN[4] in module ledOutput is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2607.426 ; gain = 0.000 ; free physical = 2015 ; free virtual = 3633
+Finished Synthesize : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2607.426 ; gain = 0.000 ; free physical = 3135 ; free virtual = 4757
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2607.426 ; gain = 0.000 ; free physical = 1926 ; free virtual = 3554
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2607.426 ; gain = 0.000 ; free physical = 3060 ; free virtual = 4692
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2615.430 ; gain = 8.004 ; free physical = 1919 ; free virtual = 3548
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2615.430 ; gain = 8.004 ; free physical = 3055 ; free virtual = 4688
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2615.430 ; gain = 8.004 ; free physical = 1906 ; free virtual = 3540
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2615.430 ; gain = 8.004 ; free physical = 3031 ; free virtual = 4666
 ---------------------------------------------------------------------------------
 No constraint files found.
 ---------------------------------------------------------------------------------
@@ -79,20 +79,20 @@ WARNING: [Synth 8-7129] Port LED_IN[6] in module layout_ledOutput_0_0 is either 
 WARNING: [Synth 8-7129] Port LED_IN[5] in module layout_ledOutput_0_0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port LED_IN[4] in module layout_ledOutput_0_0 is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2615.430 ; gain = 8.004 ; free physical = 1249 ; free virtual = 2928
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2615.430 ; gain = 8.004 ; free physical = 2231 ; free virtual = 3929
 ---------------------------------------------------------------------------------
 No constraint files found.
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2615.430 ; gain = 8.004 ; free physical = 1227 ; free virtual = 2909
+Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2615.430 ; gain = 8.004 ; free physical = 2223 ; free virtual = 3921
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2615.430 ; gain = 8.004 ; free physical = 1216 ; free virtual = 2898
+Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2615.430 ; gain = 8.004 ; free physical = 2223 ; free virtual = 3921
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -110,37 +110,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 2615.430 ; gain = 8.004 ; free physical = 597 ; free virtual = 2443
+Finished IO Insertion : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 2615.430 ; gain = 8.004 ; free physical = 1696 ; free virtual = 3533
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 2615.430 ; gain = 8.004 ; free physical = 596 ; free virtual = 2441
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 2615.430 ; gain = 8.004 ; free physical = 1696 ; free virtual = 3533
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 2615.430 ; gain = 8.004 ; free physical = 594 ; free virtual = 2439
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 2615.430 ; gain = 8.004 ; free physical = 1696 ; free virtual = 3532
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 2615.430 ; gain = 8.004 ; free physical = 594 ; free virtual = 2439
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 2615.430 ; gain = 8.004 ; free physical = 1696 ; free virtual = 3532
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 2615.430 ; gain = 8.004 ; free physical = 593 ; free virtual = 2439
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 2615.430 ; gain = 8.004 ; free physical = 1696 ; free virtual = 3532
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 2615.430 ; gain = 8.004 ; free physical = 593 ; free virtual = 2439
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 2615.430 ; gain = 8.004 ; free physical = 1695 ; free virtual = 3532
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -167,16 +167,16 @@ Report Instance Areas:
 |2     |  inst   |ledOutput |     4|
 +------+---------+----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 2615.430 ; gain = 8.004 ; free physical = 587 ; free virtual = 2433
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 2615.430 ; gain = 8.004 ; free physical = 1695 ; free virtual = 3532
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 9 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 2615.430 ; gain = 8.004 ; free physical = 585 ; free virtual = 2431
-Synthesis Optimization Complete : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 2615.438 ; gain = 8.004 ; free physical = 585 ; free virtual = 2431
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 2615.430 ; gain = 8.004 ; free physical = 1689 ; free virtual = 3526
+Synthesis Optimization Complete : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 2615.438 ; gain = 8.004 ; free physical = 1689 ; free virtual = 3526
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2615.438 ; gain = 0.000 ; free physical = 622 ; free virtual = 2482
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2615.438 ; gain = 0.000 ; free physical = 1871 ; free virtual = 3713
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2615.438 ; gain = 0.000 ; free physical = 364 ; free virtual = 2271
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2615.438 ; gain = 0.000 ; free physical = 1577 ; free virtual = 3449
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
@@ -184,11 +184,11 @@ Synth Design complete, checksum: 7e2df5ba
 INFO: [Common 17-83] Releasing license: Synthesis
 18 Infos, 9 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:38 ; elapsed = 00:00:31 . Memory (MB): peak = 2615.438 ; gain = 8.012 ; free physical = 558 ; free virtual = 2465
+synth_design: Time (s): cpu = 00:00:37 ; elapsed = 00:00:32 . Memory (MB): peak = 2615.438 ; gain = 8.012 ; free physical = 1724 ; free virtual = 3598
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [Common 17-1381] The checkpoint '/home/elias/Desktop/Projects/simpleCPU/simpleCPU.runs/layout_ledOutput_0_0_synth_1/layout_ledOutput_0_0.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2743.492 ; gain = 128.055 ; free physical = 161 ; free virtual = 1484
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP layout_ledOutput_0_0, cache-ID = 9fc07a807724d440
+write_checkpoint: Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2743.492 ; gain = 128.055 ; free physical = 454 ; free virtual = 2359
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP layout_ledOutput_0_0, cache-ID = 9b55b0954ff1a425
 INFO: [Common 17-1381] The checkpoint '/home/elias/Desktop/Projects/simpleCPU/simpleCPU.runs/layout_ledOutput_0_0_synth_1/layout_ledOutput_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file layout_ledOutput_0_0_utilization_synth.rpt -pb layout_ledOutput_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Sep 16 18:31:30 2022...
+INFO: [Common 17-206] Exiting Vivado at Sat Sep 17 15:15:14 2022...

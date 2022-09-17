@@ -1,7 +1,7 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.1 (lin64) Build 3526262 Mon Apr 18 15:47:01 MDT 2022
-// Date        : Fri Sep 16 18:31:30 2022
+// Date        : Sat Sep 17 15:15:13 2022
 // Host        : elias-xps159570 running 64-bit EndeavourOS Linux
 // Command     : write_verilog -force -mode funcsim
 //               /home/elias/Desktop/Projects/simpleCPU/simpleCPU.gen/sources_1/bd/layout/ip/layout_testModule_0_0/layout_testModule_0_0_sim_netlist.v
@@ -19,14 +19,20 @@ module layout_testModule_0_0
    (BTN,
     LED,
     clk,
-    regSelect);
+    regSelect,
+    data,
+    WE);
   input [3:0]BTN;
   output [3:0]LED;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN layout_clk, INSERT_VIP 0" *) input clk;
   output [5:0]regSelect;
+  output [7:0]data;
+  output WE;
 
   wire \<const0> ;
+  wire \<const1> ;
   wire [3:0]BTN;
+  wire WE;
   wire clk;
   wire [1:0]\^regSelect ;
 
@@ -34,6 +40,14 @@ module layout_testModule_0_0
   assign LED[2] = \<const0> ;
   assign LED[1] = \<const0> ;
   assign LED[0] = \<const0> ;
+  assign data[7] = \<const1> ;
+  assign data[6] = \<const1> ;
+  assign data[5] = \<const1> ;
+  assign data[4] = \<const1> ;
+  assign data[3] = \<const1> ;
+  assign data[2] = \<const1> ;
+  assign data[1] = \<const1> ;
+  assign data[0] = \<const1> ;
   assign regSelect[5] = \<const0> ;
   assign regSelect[4] = \<const0> ;
   assign regSelect[3] = \<const0> ;
@@ -41,8 +55,11 @@ module layout_testModule_0_0
   assign regSelect[1:0] = \^regSelect [1:0];
   GND GND
        (.G(\<const0> ));
+  VCC VCC
+       (.P(\<const1> ));
   layout_testModule_0_0_testModule inst
        (.BTN(BTN),
+        .WE(WE),
         .clk(clk),
         .regSelect(\^regSelect ));
 endmodule
@@ -50,35 +67,53 @@ endmodule
 (* ORIG_REF_NAME = "testModule" *) 
 module layout_testModule_0_0_testModule
    (regSelect,
-    BTN,
-    clk);
+    WE,
+    clk,
+    BTN);
   output [1:0]regSelect;
-  input [3:0]BTN;
+  output WE;
   input clk;
+  input [3:0]BTN;
 
   wire [3:0]BTN;
+  wire WE;
+  wire WE__0_n_0;
   wire clk;
   wire [1:0]regSelect;
   wire \regSelect[0]_i_1_n_0 ;
   wire \regSelect[1]_i_1_n_0 ;
 
-  LUT5 #(
-    .INIT(32'hDD005D00)) 
+  LUT4 #(
+    .INIT(16'h0010)) 
+    WE__0
+       (.I0(BTN[0]),
+        .I1(BTN[2]),
+        .I2(BTN[3]),
+        .I3(BTN[1]),
+        .O(WE__0_n_0));
+  FDRE WE_reg
+       (.C(clk),
+        .CE(1'b1),
+        .D(WE__0_n_0),
+        .Q(WE),
+        .R(1'b0));
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  LUT4 #(
+    .INIT(16'h0010)) 
     \regSelect[0]_i_1 
-       (.I0(BTN[1]),
+       (.I0(BTN[3]),
         .I1(BTN[2]),
-        .I2(BTN[3]),
+        .I2(BTN[1]),
         .I3(BTN[0]),
-        .I4(regSelect[0]),
         .O(\regSelect[0]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hAA002A00)) 
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  LUT4 #(
+    .INIT(16'h0010)) 
     \regSelect[1]_i_1 
-       (.I0(BTN[1]),
-        .I1(BTN[2]),
-        .I2(BTN[3]),
-        .I3(BTN[0]),
-        .I4(regSelect[1]),
+       (.I0(BTN[3]),
+        .I1(BTN[0]),
+        .I2(BTN[2]),
+        .I3(BTN[1]),
         .O(\regSelect[1]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
