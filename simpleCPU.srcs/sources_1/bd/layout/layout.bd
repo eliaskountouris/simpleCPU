@@ -7,37 +7,28 @@
       "name": "layout",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2022.1",
-      "validated": "true"
+      "tool_version": "2022.1"
     },
     "design_tree": {
-      "ledOutput_0": "",
-      "testModule_0": "",
-      "wrmModule_0": ""
+      "Memory": "",
+      "LED_Drive": "",
+      "TestModule": "",
+      "PC": "",
+      "DR": "",
+      "AR": "",
+      "IR": "",
+      "loadRegControl": "",
+      "AC": "",
+      "MUX": "",
+      "ALU": ""
     },
     "ports": {
       "CLK_IN": {
         "type": "clk",
         "direction": "I",
         "parameters": {
-          "CLK_DOMAIN": {
-            "value": "layout_clk",
-            "value_src": "default"
-          },
           "FREQ_HZ": {
             "value": "100000000"
-          },
-          "FREQ_TOLERANCE_HZ": {
-            "value": "0",
-            "value_src": "default"
-          },
-          "INSERT_VIP": {
-            "value": "0",
-            "value_src": "default"
-          },
-          "PHASE": {
-            "value": "0.0",
-            "value_src": "default"
           }
         }
       },
@@ -60,105 +51,11 @@
       }
     },
     "components": {
-      "ledOutput_0": {
-        "vlnv": "xilinx.com:module_ref:ledOutput:1.0",
-        "xci_name": "layout_ledOutput_0_0",
-        "xci_path": "ip/layout_ledOutput_0_0/layout_ledOutput_0_0.xci",
-        "inst_hier_path": "ledOutput_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "ledOutput",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "LED_IN": {
-            "direction": "I",
-            "left": "7",
-            "right": "0"
-          },
-          "LED0": {
-            "direction": "O"
-          },
-          "LED1": {
-            "direction": "O"
-          },
-          "LED2": {
-            "direction": "O"
-          },
-          "LED3": {
-            "direction": "O"
-          },
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "FREQ_HZ": {
-                "value": "100000000",
-                "value_src": "user_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "layout_clk",
-                "value_src": "default_prop"
-              }
-            }
-          }
-        }
-      },
-      "testModule_0": {
-        "vlnv": "xilinx.com:module_ref:testModule:1.0",
-        "xci_name": "layout_testModule_0_0",
-        "xci_path": "ip/layout_testModule_0_0/layout_testModule_0_0.xci",
-        "inst_hier_path": "testModule_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "testModule",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "BTN": {
-            "direction": "I",
-            "left": "3",
-            "right": "0"
-          },
-          "LED": {
-            "direction": "O",
-            "left": "3",
-            "right": "0"
-          },
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "FREQ_HZ": {
-                "value": "100000000",
-                "value_src": "user_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "layout_clk",
-                "value_src": "default_prop"
-              }
-            }
-          },
-          "regSelect": {
-            "direction": "O",
-            "left": "5",
-            "right": "0"
-          },
-          "data": {
-            "direction": "O",
-            "left": "7",
-            "right": "0"
-          },
-          "WE": {
-            "direction": "O"
-          }
-        }
-      },
-      "wrmModule_0": {
+      "Memory": {
         "vlnv": "xilinx.com:module_ref:wrmModule:1.0",
         "xci_name": "layout_wrmModule_0_1",
         "xci_path": "ip/layout_wrmModule_0_1/layout_wrmModule_0_1.xci",
-        "inst_hier_path": "wrmModule_0",
+        "inst_hier_path": "Memory",
         "reference_info": {
           "ref_type": "hdl",
           "ref_name": "wrmModule",
@@ -198,69 +95,511 @@
             "direction": "I"
           }
         }
+      },
+      "LED_Drive": {
+        "vlnv": "xilinx.com:module_ref:ledOutput:1.0",
+        "xci_name": "layout_ledOutput_0_0",
+        "xci_path": "ip/layout_ledOutput_0_0/layout_ledOutput_0_0.xci",
+        "inst_hier_path": "LED_Drive",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "ledOutput",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "LED_IN": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "LED0": {
+            "direction": "O"
+          },
+          "LED1": {
+            "direction": "O"
+          },
+          "LED2": {
+            "direction": "O"
+          },
+          "LED3": {
+            "direction": "O"
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          }
+        }
+      },
+      "TestModule": {
+        "vlnv": "xilinx.com:module_ref:testModule:1.0",
+        "xci_name": "layout_testModule_0_0",
+        "xci_path": "ip/layout_testModule_0_0/layout_testModule_0_0.xci",
+        "inst_hier_path": "TestModule",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "testModule",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "BTN": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "LED": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "regSelect": {
+            "direction": "O",
+            "left": "5",
+            "right": "0"
+          },
+          "data": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "WE": {
+            "direction": "O"
+          }
+        }
+      },
+      "PC": {
+        "vlnv": "xilinx.com:module_ref:counter:1.0",
+        "xci_name": "layout_counter_0_0",
+        "xci_path": "ip/layout_counter_0_0/layout_counter_0_0.xci",
+        "inst_hier_path": "PC",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "counter",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "increment": {
+            "direction": "I"
+          },
+          "reset_low": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "load_adress": {
+            "direction": "I",
+            "left": "5",
+            "right": "0"
+          },
+          "count": {
+            "direction": "O",
+            "left": "5",
+            "right": "0"
+          }
+        }
+      },
+      "DR": {
+        "vlnv": "xilinx.com:module_ref:registers:1.0",
+        "xci_name": "layout_registers_0_0",
+        "xci_path": "ip/layout_registers_0_0/layout_registers_0_0.xci",
+        "inst_hier_path": "DR",
+        "parameters": {
+          "SIZE": {
+            "value": "8"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "registers",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "data_in": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "data_out": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "reset_low": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "ld": {
+            "direction": "I"
+          }
+        }
+      },
+      "AR": {
+        "vlnv": "xilinx.com:module_ref:registers:1.0",
+        "xci_name": "layout_registers_1_0",
+        "xci_path": "ip/layout_registers_1_0/layout_registers_1_0.xci",
+        "inst_hier_path": "AR",
+        "parameters": {
+          "SIZE": {
+            "value": "6"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "registers",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "data_in": {
+            "direction": "I",
+            "left": "5",
+            "right": "0"
+          },
+          "data_out": {
+            "direction": "O",
+            "left": "5",
+            "right": "0"
+          },
+          "reset_low": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "ld": {
+            "direction": "I"
+          }
+        }
+      },
+      "IR": {
+        "vlnv": "xilinx.com:module_ref:registers:1.0",
+        "xci_name": "layout_registers_2_0",
+        "xci_path": "ip/layout_registers_2_0/layout_registers_2_0.xci",
+        "inst_hier_path": "IR",
+        "parameters": {
+          "SIZE": {
+            "value": "2"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "registers",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "data_in": {
+            "direction": "I",
+            "left": "1",
+            "right": "0"
+          },
+          "data_out": {
+            "direction": "O",
+            "left": "1",
+            "right": "0"
+          },
+          "reset_low": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "ld": {
+            "direction": "I"
+          }
+        }
+      },
+      "loadRegControl": {
+        "vlnv": "xilinx.com:module_ref:instructionAdressSplit:1.0",
+        "xci_name": "layout_instructionAdressSpl_0_0",
+        "xci_path": "ip/layout_instructionAdressSpl_0_0/layout_instructionAdressSpl_0_0.xci",
+        "inst_hier_path": "loadRegControl",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "instructionAdressSplit",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "data": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "address": {
+            "direction": "O",
+            "left": "5",
+            "right": "0"
+          },
+          "instruction": {
+            "direction": "O",
+            "left": "1",
+            "right": "0"
+          }
+        }
+      },
+      "AC": {
+        "vlnv": "xilinx.com:module_ref:registers:1.0",
+        "xci_name": "layout_registers_3_0",
+        "xci_path": "ip/layout_registers_3_0/layout_registers_3_0.xci",
+        "inst_hier_path": "AC",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "registers",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "data_in": {
+            "direction": "I",
+            "left": "0",
+            "right": "0"
+          },
+          "data_out": {
+            "direction": "O",
+            "left": "0",
+            "right": "0"
+          },
+          "reset_low": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "ld": {
+            "direction": "I"
+          }
+        }
+      },
+      "MUX": {
+        "vlnv": "xilinx.com:module_ref:muxIR:1.0",
+        "xci_name": "layout_muxIR_0_0",
+        "xci_path": "ip/layout_muxIR_0_0/layout_muxIR_0_0.xci",
+        "inst_hier_path": "MUX",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "muxIR",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "instruction": {
+            "direction": "I",
+            "left": "1",
+            "right": "0"
+          },
+          "addTrigger": {
+            "direction": "O"
+          },
+          "andTrigger": {
+            "direction": "O"
+          },
+          "jmpTrigger": {
+            "direction": "O"
+          },
+          "incTrigger": {
+            "direction": "O"
+          }
+        }
+      },
+      "ALU": {
+        "vlnv": "xilinx.com:module_ref:ALU:1.0",
+        "xci_name": "layout_ALU_0_0",
+        "xci_path": "ip/layout_ALU_0_0/layout_ALU_0_0.xci",
+        "inst_hier_path": "ALU",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "ALU",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "addTrigger": {
+            "direction": "I"
+          },
+          "andTrigger": {
+            "direction": "I"
+          },
+          "incTrigger": {
+            "direction": "I"
+          },
+          "accumulator": {
+            "direction": "I",
+            "left": "5",
+            "right": "0"
+          },
+          "addressReg": {
+            "direction": "I",
+            "left": "5",
+            "right": "0"
+          },
+          "doneFlag": {
+            "direction": "O"
+          },
+          "data_out": {
+            "direction": "O",
+            "left": "5",
+            "right": "0"
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          }
+        }
       }
     },
     "nets": {
+      "AC_data_out": {
+        "ports": [
+          "AC/data_out",
+          "ALU/accumulator"
+        ]
+      },
+      "ALU_0_data_out": {
+        "ports": [
+          "ALU/data_out",
+          "AC/data_in"
+        ]
+      },
+      "ALU_0_doneFlag": {
+        "ports": [
+          "ALU/doneFlag",
+          "PC/increment"
+        ]
+      },
+      "AR_data_out": {
+        "ports": [
+          "AR/data_out",
+          "ALU/addressReg"
+        ]
+      },
       "BTN_1": {
         "ports": [
           "BTN",
-          "testModule_0/BTN"
+          "TestModule/BTN"
+        ]
+      },
+      "IR_data_out": {
+        "ports": [
+          "IR/data_out",
+          "MUX/instruction"
         ]
       },
       "clk_1": {
         "ports": [
           "CLK_IN",
-          "ledOutput_0/clk",
-          "testModule_0/clk",
-          "wrmModule_0/clk"
+          "Memory/clk",
+          "LED_Drive/clk",
+          "TestModule/clk",
+          "PC/clk",
+          "DR/clk",
+          "AR/clk",
+          "IR/clk",
+          "AC/clk",
+          "ALU/clk"
+        ]
+      },
+      "counter_0_count": {
+        "ports": [
+          "PC/count",
+          "DR/ld"
+        ]
+      },
+      "instructionAdressSpl_0_address": {
+        "ports": [
+          "loadRegControl/address",
+          "AR/data_in",
+          "AR/ld"
+        ]
+      },
+      "instructionAdressSpl_0_instruction": {
+        "ports": [
+          "loadRegControl/instruction",
+          "IR/data_in",
+          "IR/ld"
         ]
       },
       "ledOutput_0_LED0": {
         "ports": [
-          "ledOutput_0/LED0",
+          "LED_Drive/LED0",
           "LED0"
         ]
       },
       "ledOutput_0_LED1": {
         "ports": [
-          "ledOutput_0/LED1",
+          "LED_Drive/LED1",
           "LED1"
         ]
       },
       "ledOutput_0_LED2": {
         "ports": [
-          "ledOutput_0/LED2",
+          "LED_Drive/LED2",
           "LED2"
         ]
       },
       "ledOutput_0_LED3": {
         "ports": [
-          "ledOutput_0/LED3",
+          "LED_Drive/LED3",
           "LED3"
+        ]
+      },
+      "muxIR_0_addTrigger": {
+        "ports": [
+          "MUX/addTrigger",
+          "ALU/addTrigger"
+        ]
+      },
+      "muxIR_0_andTrigger": {
+        "ports": [
+          "MUX/andTrigger",
+          "ALU/andTrigger"
+        ]
+      },
+      "muxIR_0_incTrigger": {
+        "ports": [
+          "MUX/incTrigger",
+          "ALU/incTrigger"
+        ]
+      },
+      "registers_0_data_out": {
+        "ports": [
+          "DR/data_out",
+          "loadRegControl/data"
         ]
       },
       "testModule_0_WE": {
         "ports": [
-          "testModule_0/WE",
-          "wrmModule_0/writeEnable"
+          "TestModule/WE",
+          "Memory/writeEnable"
         ]
       },
       "testModule_0_data": {
         "ports": [
-          "testModule_0/data",
-          "wrmModule_0/data_in"
+          "TestModule/data",
+          "Memory/data_in"
         ]
       },
       "testModule_0_regSelect": {
         "ports": [
-          "testModule_0/regSelect",
-          "wrmModule_0/address"
+          "TestModule/regSelect",
+          "Memory/address"
         ]
       },
       "wrmModule_0_data_out": {
         "ports": [
-          "wrmModule_0/data_out",
-          "ledOutput_0/LED_IN"
+          "Memory/data_out",
+          "LED_Drive/LED_IN",
+          "DR/data_in"
         ]
       }
     }

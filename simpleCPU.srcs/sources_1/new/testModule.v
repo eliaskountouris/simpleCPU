@@ -30,7 +30,6 @@ module testModule(
     initial
         begin
              regSelect = 0;
-             data = 8'hff;
        end
     
     always @ (posedge clk) begin
@@ -48,8 +47,8 @@ module testModule(
                 regSelect = 2;
                 end 
             4'b1000: begin
-                WE = 1;
-                regSelect = 0;
+                WE = 0;
+                regSelect = 3;
                 end 
             default: begin
                 WE = 0;
