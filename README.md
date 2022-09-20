@@ -19,3 +19,7 @@ Adressing: 6 bits
 | AND | 01 | And value with value in accumulator |
 | JMP | 10 | Jump to instruction |
 | SB | 11 | Store accumulator value to memory |
+
+## Building
+
+Use Vivado to download onto a Pynq-Z2 board
