@@ -4,4 +4,4 @@ Architecture based on the following educational resource: http://www.ece.uprm.ed
 
 ## Block Diagram
 
-![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
+![alt text](https://github.com/eliaskountouris/simpleCPU/blob/main/BlockDiagram.jpg?raw=true)
